@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+		*{color: blue;}
+
+		.toggle-switch {display: none;}
+		.toggle-switch + label:before { content: "Hide"; }
+		.toggle-switch + label:before { content: "Show"; }
+		.toggle-switch: checked ~ .toggle-content { display: none; }
+
+
+	</style>
+</head>
+
+<body>
+	<input type="checkbox" id="toggle-sw" checked='checked' class='toggle-switch'>
+	<label for="toggle-sw" class='btn'>click</label>
+
+	<div class='toggle-content'> form </div>
+
+</body>
+</html>
+
+<!-- selected 는 먹히는데 checked 는 안먹힘!!! -->
+
+<!--
+
+	    <label for=cb>Click Here</label>
+    <input type='checkbox' style='display: none' id=cb>
+    <div>
+      Hello. This is some stuff.
+    </div>
+input:selected + label + div { display: none; }
+input[type=checkbox]: checked + label + div{ display:none; }
+
+
+https://css-tricks.com/almanac/selectors/c/checked/
+
+### css1
+		input[type=checkbox]:checked ~ div { display: block; }
+		input[type=checkbox] ~ div { display: none; }
+
+### css2
+		input[type=checkbox] + label {
+		  color: #ccc;
+		  font-style: italic;
+		} 
+		input[type=checkbox]:checked + label {
+		  color: #f00;
+		  font-style: normal;
+		} 
+-->

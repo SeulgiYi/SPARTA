@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> One-page Shopping Mall </title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<script type="text/javascript">
+    function complete_order(){
+      alert('주문되었습니다')
+    }
+  	</script>
+</head>
+
+<body>
+	<div>
+		<!-- 상품사진 -->
+	</div>
+
+	<div>
+		<!--상품내용-->
+		<h2>상품제목</h2>
+		<h3>상품설명</h3>
+	</div>
+
+	<div>
+		<!--주문하기-->
+		<form action="#" name="ordering">
+			<fieldset>
+				<legend> 주문 상세 입력 </legend>
+					수량: <select>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select> <br>
+					 
+					주문자 정보<br>
+					성함: <input type="text"> <br>
+					주소: <input type="text"> <br>
+					<input type = "submit" value="주문하기" onclick="complete_order()"/>
+					<input type = "reset" value="주문초기화"/>
+
+			</fieldset>
+		</form>
+
+					
+
+	</div>
+</body>
+</html>
