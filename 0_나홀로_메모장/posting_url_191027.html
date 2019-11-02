@@ -68,13 +68,13 @@
       $.ajax({
         type: "POST",
         url: "http://spartacodingclub.shop/post",
-        data: { url_vig: url,
+        data: { url_give: url,
           comment_give: comment,
           author_give: author },
           success: function(response){
             if (response['result'] == 'success') {
               alert('포스팅 성공!')
-              window.location.reload()
+              window.location.reload() //페이지 새로고침
             } else {
               alert('오류 발생!')
             }
@@ -82,14 +82,7 @@
         })
     }
 
-    $.ajax({
-      type: "GET",
-      url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99",
-      data: {},
-      success: function(response){
-        console.log(response)
-      }
-    })
+
 
     $(document).ready(function(){
       $('#cards-box').html('')
@@ -105,13 +98,13 @@
           if (response['result'] == 'success') {
             let articles = response['articles']
             for (let i = 0; i < articles.length; i++) {
-              console.log(articles[i])
+              //console.log(articles[i])
               current = articles[i]
               make_card(current['comment'],
-                        current['desc'],
-                        current['image'],
-                        current['title'],
-                        current['url'])
+                current['desc'],
+                current['image'],
+                current['title'],
+                current['url'])
             }
           } else {
             alert('기사를 받아오지 못하였습니다')
